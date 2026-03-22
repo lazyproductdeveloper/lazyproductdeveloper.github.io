@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+const projectLink = 'https://zombiesandluig.com';
+const projectName = 'Zombies and Luig';
+---
+
+<Layout
+  title="Zombies and Luig - LazyProductDeveloper"
+  description="A fan site for the game Zombies and Luig."
+>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <a href="/" class="text-sm text-[#57606a] hover:text-[#0969da] mb-8 inline-flex items-center">
+      <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back
+    </a>
+
+    <article>
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold text-[#24292f] mb-4">Zombies and Luig</h1>
+        <p class="text-lg text-[#57606a] leading-relaxed mb-6">
+          A fan website for the game Zombies and Luig, provides link to the itch.io online game and some tips and videos about the game.
+        </p>
+        <a
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 bg-[#0969da] text-white text-sm font-medium rounded-md hover:bg-[#085bb8] transition-colors"
+        >
+          Visit {projectName}
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </header>
+
+      <div class="border-t border-[#d0d7de] pt-8">
+        <section class="mb-8">
+          <h2 class="text-xl font-semibold text-[#24292f] mb-3">About the Game</h2>
+          <p class="text-[#57606a] leading-relaxed">
+            Zombies and Luig is an exciting game that brings together the thrill of zombie survival with unique gameplay mechanics.
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-xl font-semibold text-[#24292f] mb-3">What You'll Find</h2>
+          <ul class="space-y-2 text-[#57606a]">
+            <li class="flex items-start">
+              <span class="text-[#0969da] mr-2">•</span>
+              Link to play on itch.io
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#0969da] mr-2">•</span>
+              Game tips and strategies
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#0969da] mr-2">•</span>
+              Gameplay videos and tutorials
+            </li>
+            <li class="flex items-start">
+              <span class="text-[#0969da] mr-2">•</span>
+              Community resources
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="border-t border-[#d0d7de] mt-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-center text-[#57606a] text-sm">
+        © {new Date().getFullYear()} LazyProductDeveloper
+      </p>
+    </div>
+  </footer>
+</Layout>

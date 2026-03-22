@@ -4,60 +4,70 @@ import Header from '../components/Header.astro';
 
 const projects = [
   {
-    title: 'Project One',
-    description: 'A sample project showcasing web development capabilities.',
-    href: '/project-one',
-    tags: ['Web', 'React'],
+    title: 'Hytale Tools',
+    description: 'An all-in-one data powerhouse for the Hytale community.',
+    href: '/hytaletools',
+    link: 'https://hytaletools.io',
   },
   {
-    title: 'Project Two',
-    description: 'Another amazing project built with modern technologies.',
-    href: '/project-two',
-    tags: ['Mobile', 'React Native'],
+    title: 'Kingdom of Marionettes Online',
+    description: 'A website about the game Kingdom of Marionettes, with link to online demo.',
+    href: '/kingdom-of-marionettes',
+    link: 'https://kingdomofmarionettes.online',
+  },
+  {
+    title: 'Zombies and Luig',
+    description: 'A website about the game Zombies and Luig, with itch.io game and tips.',
+    href: '/zombies-and-luig',
+    link: 'https://zombiesandluig.com',
   },
 ];
 ---
 
-<Layout title="LazyProductDeveloper - Project Showcase">
+<Layout
+  title="LazyProductDeveloper"
+  description="Hi there, I'm a Lazy Product Developer"
+>
   <Header />
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        Welcome to My Project Showcase
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="mb-12">
+      <h1 class="text-3xl font-bold text-[#24292f] mb-4">
+        Hi there, I'm a Lazy Product Developer
       </h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Explore my collection of projects and experiments in software development.
+      <p class="text-[#57606a] text-lg leading-relaxed">
+        They say "pick a lazy person to do a hard job because they will find an easy way to do it." That's me. I build tools so I can spend more time doing... well, nothing.
       </p>
-    </div>
+    </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {projects.map((project) => (
-        <a
-          href={project.href}
-          class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all"
-        >
-          <h2 class="text-xl font-semibold text-gray-900 mb-2">
-            {project.title}
-          </h2>
-          <p class="text-gray-600 mb-4">
-            {project.description}
-          </p>
-          <div class="flex gap-2">
-            {project.tags.map((tag) => (
-              <span class="px-2 py-1 text-xs font-medium bg-gray-100 text-gray-600 rounded">
-                {tag}
-              </span>
-            ))}
+    <section>
+      <h2 class="text-xl font-semibold text-[#24292f] mb-6">What I'm Building</h2>
+      <div class="space-y-4">
+        {projects.map((project) => (
+          <div class="block p-4 border border-[#d0d7de] rounded-lg hover:border-[#0969da] hover:bg-[#f6f8fa] transition-all">
+            <div class="flex items-center justify-between">
+              <a href={project.href} class="flex-1">
+                <h3 class="font-semibold text-[#24292f]">{project.title}</h3>
+                <p class="text-sm text-[#57606a] mt-1">{project.description}</p>
+              </a>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[#0969da] text-sm hover:underline whitespace-nowrap"
+              >
+                Visit →
+              </a>
+            </div>
           </div>
-        </a>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   </main>
 
-  <footer class="border-t border-gray-200 mt-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <p class="text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} LazyProductDeveloper. All rights reserved.
+  <footer class="border-t border-[#d0d7de] mt-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-center text-[#57606a] text-sm">
+        © {new Date().getFullYear()} LazyProductDeveloper
       </p>
     </div>
   </footer>
