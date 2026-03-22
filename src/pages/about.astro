@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="About - LazyProductDeveloper">
+  <Header />
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">About Me</h1>
+
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p>
+        Welcome to my project showcase! I'm a passionate developer who loves building useful products.
+      </p>
+      <p>
+        This website serves as a collection of my side projects, experiments, and experiments in software development.
+      </p>
+
+      <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Tech Stack</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Frontend: React, Vue, Astro</li>
+        <li>Mobile: React Native</li>
+        <li>Backend: Node.js, Python</li>
+        <li>Cloud: AWS, Vercel</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold text-gray-900 mt-8 mb-4">Contact</h2>
+      <p>
+        Feel free to reach out if you'd like to collaborate or just say hi!
+      </p>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-200 mt-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <p class="text-center text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} LazyProductDeveloper. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</Layout>
